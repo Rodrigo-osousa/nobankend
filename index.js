@@ -3,8 +3,6 @@ const express = require ('express')
 const mongoose = require('mongoose')
 const app = express()
 
-const Customer = require('./models/Customer')
-
 //Way of reading Json / middlewares
 app.use(
     express.urlencoded({
@@ -14,50 +12,11 @@ app.use(
 
 app.use(express.json())
 
-//API routes
+//Routs
 
-app.post('/customer/new', async (req, res) => {
+const customerRoutes = require('./routes/customerRoutes')
 
-    //req.Body
-    const {name, addres, documentNumber} = req.body
-
-    if(!name) {
-        res.status(422).json({ error: 'Name cannot be blank'})
-    }
-
-    if(!addres) {
-        res.status(422).json({ error: 'Addres cannot be blank'})
-    }
-
-    if(!documentNumber) {
-        res.status(422).json({ error: 'Document Number cannot be blank'})
-    }
-
-    const customer ={
-        name,
-        addres,
-        documentNumber
-    }
-
-    try {
-        //creating data
-        await Customer.create(customer)
-        
-        res.status(201).json({message: 'Customer created successfully!'})
-
-    } catch (error) {
-        res.status(500).json({error: error})
-        
-    }
-
-
-})
-
-//Initial route
-app.get('/customer/list', (req, res) =>{
-    res.json({message: 'Hello Express!'})
-})
-
+app.use('/customer', customerRoutes)
 
 //Port
 const DB_USER = 'admin'

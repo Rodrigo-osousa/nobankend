@@ -4,4 +4,4 @@ admin
 
 
 
-mongodb+srv://admin:<password>@apicluster.jqfwa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+mongodb+srv://admin:LrnsPlTZC26beB28@apicluster.jqfwa.mongodb.net/nobankend-db?retryWrites=true&w=majority

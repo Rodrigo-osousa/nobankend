@@ -1,0 +1,7 @@
+189.33.66.40
+LrnsPlTZC26beB28
+admin
+
+
+
+mongodb+srv://admin:<password>@apicluster.jqfwa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

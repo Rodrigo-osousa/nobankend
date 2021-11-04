@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js localhost 3000"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Rodrigo-osousa/nobankend/issues"
   },
-  "homepage": "https://github.com/Rodrigo-osousa/nobankend#readme"
+  "homepage": "https://github.com/Rodrigo-osousa/nobankend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14"
+  }
 }
